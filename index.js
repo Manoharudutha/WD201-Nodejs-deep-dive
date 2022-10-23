@@ -55,9 +55,22 @@ const todoList = () => {
   };
 
   const toDisplayableList = (list) => {
+    const formattedDate = (d) => {
+      return d.toISOString().split("T")[0];
+    };
+
+    var dateToday = new Date();
+    const today = formattedDate(dateToday);
+
+    let flag = list[0].dueDate == today ? true : false;
     const strArr = list.map((x) => {
-      if (x.completed == true) return "[x] " + x.title;
-      else return "[ ] " + x.title;
+      if (flag == true) {
+        if (x.completed == true) return "[x] " + x.title;
+        else return "[ ] " + x.title;
+      } else {
+        if (x.completed == true) return "[x] " + x.title + " " + x.dueDate;
+        else return "[ ] " + x.title + " " + x.dueDate;
+      }
     });
 
     let str = strArr.join("\n");
