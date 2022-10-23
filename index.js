@@ -60,8 +60,7 @@ const todoList = () => {
       else return "[ ] " + x.title;
     });
 
-    let str = "";
-    for (let i = 0; i < strArr.length; i++) str += strArr[i] + "\n";
+    let str = strArr.join("\n");
 
     return str;
   };
