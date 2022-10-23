@@ -55,12 +55,6 @@ const todoList = () => {
   };
 
   const toDisplayableList = (list) => {
-    // Format the To-Do list here, and return the output string as per the format given above.
-    // FILL YOUR CODE HERE
-    // ..
-    // ..
-    // ..
-    // return OUTPUT_STRING
     const strArr = list.map((x) => {
       if (x.completed == true) return "[x] " + x.title;
       else return "[ ] " + x.title;
