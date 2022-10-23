@@ -77,10 +77,6 @@ const todoList = () => {
   };
 };
 
-// ####################################### #
-// DO NOT CHANGE ANYTHING BELOW THIS LINE. #
-// ####################################### #
-
 const todos = todoList();
 
 const formattedDate = (d) => {
